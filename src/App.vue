@@ -351,7 +351,7 @@ img {
   position: relative;
   width: 100%;
   padding-left: 5rem;
-  height: 70vh;
+  height: 80vh;
   top: 96px;
   display: flex;
   background-color: #fff;
@@ -374,7 +374,7 @@ img {
   position: relative;
   height: auto;
   overflow: auto;
-  top: -2.5rem;
+  top: -5rem;
   padding: 2rem;
   background-color: #fff;
   border-radius: 65px;
