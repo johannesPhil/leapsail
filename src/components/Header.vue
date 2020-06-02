@@ -1,11 +1,7 @@
 <template>
   <div class="header">
     <div class="logo">
-      <font-awesome-icon
-        :icon="['fas', 'parachute-box']"
-        style="color: #FF6700; font-size: 2.3rem"
-      />
-      Lit.
+      <img src="../assets/lit.png" alt="" />
     </div>
     <div class="user-control">
       <font-awesome-icon
@@ -57,7 +53,13 @@ export default {
   z-index: 2;
 }
 .logo {
+  width: 80px;
+  height: 80px;
   margin-left: 2rem;
+}
+img {
+  width: 100%;
+  height: 100%;
 }
 .user-control {
   min-width: 30%;

@@ -1,10 +1,7 @@
 <template>
   <div class="footer">
     <div class="logo">
-      <font-awesome-icon
-        :icon="['fas', 'parachute-box']"
-        style="color: #FF6700; font-size: 2.3rem"
-      />
+      <img src="../assets/lit-footer.png" alt="">
     </div>
     <div class="links">
       <a href="">Terms</a>
@@ -44,6 +41,14 @@ a {
   align-items: center;
   background: #242424;
   color: #fff;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+img{
+    width: 100%;
+    height: 100%;
 }
 .links,
 .social {
