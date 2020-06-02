@@ -6,12 +6,37 @@
       <p class="gold__frequency">Per month</p>
     </div>
     <button>Activate</button>
+    <font-awesome-icon
+      class="hide"
+      v-if="isVisible"
+      :icon="['fas', 'caret-up']"
+      @click="toggleGold"
+      style="font-size: 2rem;cursor:pointer; color:#7a00d1;"
+    />
+    <font-awesome-icon
+      class="hide"
+      v-if="!isVisible"
+      :icon="['fas', 'caret-down']"
+      @click="toggleGold"
+      style="font-size: 2rem;cursor:pointer; color:#7a00d1;"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Gold"
+  name: "Gold",
+  data() {
+    return {
+      isVisible: false
+    };
+  },
+  methods: {
+    toggleGold() {
+      this.isVisible = !this.isVisible;
+      this.$emit("toggleGold", this.isVisible);
+    }
+  }
 };
 </script>
 
@@ -37,6 +62,7 @@ export default {
 }
 .gold__amount {
   color: #656565;
+  font-size: 3rem;
 }
 .gold__frequency {
   text-align: center;
@@ -51,5 +77,17 @@ button {
   color: #fff;
   border-radius: 46px;
   border: transparent;
+}
+
+@media screen and (max-width: 320px) {
+  .hide {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .hide {
+    display: none;
+  }
 }
 </style>

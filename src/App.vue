@@ -39,167 +39,251 @@
           </ul>
         </div>
         <div id="bronze">
-          <Bronze @clickBronze="bronze" />
-          <ul class="bronze__ul" ref="bronze__ul">
-            <li class="bronze__li">50K - 150K Naira</li>
+          <Bronze @toggleBronze="toggleBronze" />
+          <ul
+            class="bronze__ul"
+            ref="bronze__ul"
+            :class="{ isVisible: isBronze }"
+          >
             <li class="bronze__li">
+              <span class="mobile_desc">Loan</span>
+              <span>50K - 2M Naira</span>
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Investment</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="bronze__li">
+              <span class="mobile_desc">Travel Savings</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="bronze__li">
-              <font-awesome-icon :icon="['fas', 'check-circle']" />
-            </li>
-            <li class="bronze__li">200K - 450K Naira</li>
-            <li class="bronze__li">
+              <span class="mobile_desc">Security</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="bronze__li">
-              <font-awesome-icon :icon="['fas', 'check-circle']" />
-            </li>
-            <li class="bronze__li">__</li>
-            <li class="bronze__li">Just 1</li>
-            <li class="bronze__li">
-              <font-awesome-icon :icon="['fas', 'check-circle']" />
+              <span class="mobile_desc">Bank Statement</span>
+              <span>200K - 450K Naira</span>
             </li>
             <li class="bronze__li">
-              <font-awesome-icon :icon="['fas', 'check-circle']" />
-            </li>
-            <li class="bronze__li">__</li>
-            <li class="bronze__li">
-              <font-awesome-icon :icon="['fas', 'check-circle']" />
-            </li>
-            <li class="bronze__li">__</li>
-            <li class="bronze__li">__</li>
-            <li class="bronze__li">__</li>
-            <li class="bronze__li">__</li>
-            <li class="bronze__li">
+              <span class="mobile_desc">Visa</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="bronze__li">
+              <span class="mobile_desc">Ticket</span>
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Escort</span>
+              <span>__</span>
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Free Destination</span>
+              <span>Just 1</span>
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Tour Package</span>
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Hotel Reservation</span>
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Customer Success</span>
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Travel Show</span>
+              <span>__</span>
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Events</span>
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Games</span> <span>__</span>
+            </li>
+            <li class="bronze__li"><span class="mobile_desc">Gold Investor</span>
+              <span>__</span></li>
+            <li class="bronze__li"><span class="mobile_desc">Startup</span>
+              <span>__</span></li>
+            <!-- <li class="bronze__li">__</li> -->
+            <li class="bronze__li">
+              <span class="mobile_desc">Give a Meal</span>
+              
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="bronze__li">
+              <span class="mobile_desc">Cargo</span>
+            
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
           </ul>
         </div>
         <div id="silver">
-          <Silver />
-          <ul class="silver__ul">
-            <li class="silver__li">50K - 2M Naira</li>
+          <Silver @toggleSilver="toggleSilver" />
+          <ul class="silver__ul" :class="{ isVisible: isSilver }">
             <li class="silver__li">
+               <span class="mobile_desc">Loan</span>
+              <span>50K - 150K Naira</span>
+            </li>
+            <li class="silver__li">
+              <span class="mobile_desc">Investment</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Travel Savings</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
-              <font-awesome-icon :icon="['fas', 'check-circle']" />
-            </li>
-            <li class="silver__li">200K - 1M Naira</li>
-            <li class="silver__li">
+              <span class="mobile_desc">Security</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Bank Statement</span>
+              <span>200K - 1M Naira</span>
+            </li>
+            <li class="silver__li">
+              <span class="mobile_desc">Visa</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Ticket</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
-              Just 3
-            </li>
-            <li class="silver__li">
+              <span class="mobile_desc">Escort</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Free Destination</span>
+              <span>Just 3</span>
+            </li>
+            <li class="silver__li">
+              <span class="mobile_desc">Tour Package</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
-              __
-            </li>
-            <li class="silver__li">
+              <span class="mobile_desc">Hotel Reservation</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Customer Success</span>
+              <span>__</span>
+            </li>
+            <li class="silver__li">
+              <span class="mobile_desc">Travel Show</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
-              __
+              <span class="mobile_desc">Event</span>
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="silver__li">
+              <span class="mobile_desc">Games</span>
+              <span>__</span>
             </li>
             <li class="silver__li">
               Silver Investor
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Startup</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Give a Meal</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="silver__li">
+              <span class="mobile_desc">Cargo</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
           </ul>
         </div>
         <div id="gold">
-          <Gold />
-          <ul class="gold__ul">
-            <li class="gold__li">50K - 4M Naira</li>
+          <Gold @toggleGold="toggleGold" />
+          <ul class="gold__ul" :class="{ isVisible: isGold }">
             <li class="gold__li">
+              <span class="mobile_desc">Loan</span>
+              <span>50K - 4M Naira</span>
+            </li>
+            <li class="gold__li">
+              <span class="mobile_desc">Investment</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Travel Savings</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
-              <font-awesome-icon :icon="['fas', 'check-circle']" />
-            </li>
-            <li class="gold__li">200K - 1M Naira</li>
-            <li class="gold__li">
+              <span class="mobile_desc">Security</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Bank Statement</span>
+              <span>200K - 1M Naira</span></li>
+            <li class="gold__li">
+              <span class="mobile_desc">Visa</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Ticket</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Escort</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Free Destination</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Tour Package</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Hotel Reservation</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Customer Success</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Travel Show</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Events</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Games</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Gold Investor</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Startup</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
             <li class="gold__li">
+              <span class="mobile_desc">Give a Meal</span>
+              <font-awesome-icon :icon="['fas', 'check-circle']" />
+            </li>
+            <li class="gold__li">
+              <span class="mobile_desc">Cargo</span>
               <font-awesome-icon :icon="['fas', 'check-circle']" />
             </li>
           </ul>
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -208,31 +292,34 @@ import Header from "./components/Header.vue";
 import Bronze from "./components/Bronze";
 import Silver from "./components/Silver";
 import Gold from "./components/Gold";
+import Footer from './components/Footer';
 export default {
   name: "App",
   components: {
     Header,
     Bronze,
     Silver,
-    Gold
+    Gold,
+    Footer
   },
   data() {
     return {
       isBronze: false,
       isSilver: false,
       isGold: false
-    }
+    };
   },
   methods: {
     toggleBronze(visibility) {
-      if( visibility ){
-        this.isBronze == false
-      } else{
-        this.$refs['bronze__ul'].style.display = 'block';
-        console.log('It was invisible');
-      }
+      this.isBronze = visibility;
+    },
+    toggleSilver(visibility) {
+      this.isSilver = visibility;
+    },
+    toggleGold(visibility) {
+      this.isGold = visibility;
     }
-  },
+  }
 };
 </script>
 
@@ -252,10 +339,12 @@ img {
   height: 100%;
 }
 .container {
+  position: relative;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
+  overflow: auto;
 }
 
 .hero {
@@ -276,16 +365,16 @@ img {
 .hero__illustration {
 }
 .plan {
-  position: relative;
+  position:relative;
   width: 100%;
   height: auto;
   background-color: #f5f5f5;
 }
 .plan__option {
-  position: absolute;
+  position: relative;
   height: auto;
   overflow: auto;
-  top: -10px;
+  top: -2.5rem;
   padding: 2rem;
   background-color: #fff;
   border-radius: 65px;
@@ -294,7 +383,11 @@ img {
   flex-direction: row;
   justify-content: space-between;
 }
-
+/* 
+#bronze{
+  height: auto;
+  overflow: auto;
+} */
 #feat h2 {
   margin: 0;
   text-transform: capitalize;
@@ -307,16 +400,23 @@ img {
 .gold__ul {
   padding-inline-start: 0;
 }
+.mobile_desc {
+  color: #656565;
+}
 .feat__li,
 .bronze__li,
 .silver__li,
 .gold__li {
   width: 100%;
   list-style: none;
-  line-height: 4rem;
+  height: 4rem;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .feat__li {
+  text-align: left;
   padding-left: 1rem;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -335,9 +435,6 @@ img {
 .silver__li:nth-child(odd),
 .gold__li:nth-child(odd) {
   background-color: #fbfbfb;
-}
-.isVisible{
-  display: block;
 }
 
 @media screen and (min-width: 320px) {
@@ -360,6 +457,14 @@ img {
   .gold__ul {
     display: none;
   }
+  .mobile_desc {
+    display: block;
+  }
+  .bronze__li,
+  .silver__li,
+  .gold__li {
+    justify-content: space-between;
+  }
   #bronze,
   #silver,
   #gold {
@@ -381,11 +486,19 @@ img {
   .plan__option {
     flex-direction: row;
   }
+  .mobile_desc {
+    display: none;
+  }
+  .bronze__li,
+  .silver__li,
+  .gold__li {
+    justify-content: center;
+  }
   #feat,
   .feat__ul,
   .bronze__ul,
   .silver__ul,
-  .gold__ul{
+  .gold__ul {
     display: block;
   }
   #feat,
@@ -401,5 +514,8 @@ img {
     left: 10%;
     width: 80%;
   }
+}
+.isVisible {
+  display: block;
 }
 </style>

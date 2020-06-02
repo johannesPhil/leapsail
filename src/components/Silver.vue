@@ -6,12 +6,37 @@
       <p class="silver__frequency">Per month</p>
     </div>
     <button>Activate</button>
+    <font-awesome-icon
+    class="hide"
+      v-if="isVisible"
+      :icon="['fas', 'caret-up']"
+      @click="toggleSilver"
+      style="font-size: 2rem;cursor:pointer; color:#0090e8"
+    />
+    <font-awesome-icon
+    class="hide"
+      v-if="!isVisible"
+      :icon="['fas', 'caret-down']"
+      @click="toggleSilver"
+      style="font-size: 2rem;cursor:pointer; color:#0090e8"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Silver"
+  name: "Silver",
+  data() {
+    return {
+      isVisible: false
+    };
+  },
+  methods: {
+    toggleSilver() {
+      this.isVisible = !this.isVisible;
+      this.$emit("toggleSilver", this.isVisible);
+    }
+  }
 };
 </script>
 
@@ -37,6 +62,7 @@ export default {
 }
 .silver__amount {
   color: #656565;
+  font-size:3rem;
 }
 .silver__frequency {
   text-align: center;
@@ -52,5 +78,16 @@ button {
   color: #fff;
   border-radius: 46px;
   border: transparent;
+}
+@media screen and (max-width: 320px) {
+  .hide {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .hide {
+    display: none;
+  }
 }
 </style>
